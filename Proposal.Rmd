@@ -1,0 +1,28 @@
+---
+title: 'STAT447c Project Proposal'
+author: "Samson Remai (Solo; 38686804)"
+date: "March 15, 2024"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+**Github Repo**
+
+<https://github.com/Samson-Remai/GAN>
+
+
+**Introduction**
+
+I will be building a **deep generative model** called a Generative Adversarial Network (GAN) to generate abstract art. GANs are behind many of the most recent "deep fake" models, including NVIDIA's face generating program that produces images nearly indistinguishable from real people. In short, they operate by having two models: a discriminator and a generator. The two "compete" against each other, with the generator trying to create images that fool the discriminator. Each model has it's own loss, which are used to train both models.
+
+The key problem with this model is convergence. Ideally, the discriminator will reach a 50% accuracy, meaning it's effectively flipping a coin to decide between real and fake. However, this means that the discriminator loss function loses value very quickly as the generator improves and will eventually feed bad information back into the generator, making it difficult to converge. 
+
+To handle this issue, and the general complexity of having a deep generative model with two internal neural nets, I simplified my domain. Rather than generating human faces, animals, or common objects that would almost assuredly appear unrealistic, I am generating abstract art. This should hide a lot of problems I have along the way, as my model's actual performance is far less important.
+
+I will mainly be using the "RGAN" library in R (<https://cran.r-project.org/web/packages/RGAN/index.html>), which has plenty of documentation to give me a foundation. I will also be utilizing the many public sources on GANs, including Google's GAN course (<https://developers.google.com/machine-learning/gan>), lecture slides from Stanford (<https://deepgenerativemodels.github.io/notes/gan/>), and articles such as pathmind's wiki (<https://wiki.pathmind.com/generative-adversarial-network-gan>).
+
+
+**Datasets**
+
+The two main datasets I found were both abstract art images from Kaggle. They are simply jpg images of abstract art. (<https://www.kaggle.com/datasets/bryanb/abstract-art-gallery?resource=download>) and (<https://www.kaggle.com/datasets/greg115/abstract-art>)

@@ -9,7 +9,7 @@ output:
 
 **Github Repo**
 
-<https://github.com/Samson-Remai/GAN>
+<https://github.com/Samson-Remai/GAN-Project>
 
 
 **Introduction**
